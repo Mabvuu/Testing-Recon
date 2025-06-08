@@ -17,9 +17,13 @@ export default function Login({ setToken, setIsAdmin }) {
   const submitAdmin = async () => {
     try {
       const res = await axios.post(
-        'http://localhost:3001/auth/login',
-        { email: adminEmail, password: adminPassword }
-      );
+  `${import.meta.env.VITE_API_URL}/auth/login`,
+  {
+    email: adminEmail,
+    password: adminPassword
+  }
+);
+
       setToken(res.data.token);
       const payload = JSON.parse(atob(res.data.token.split('.')[1]));
       setIsAdmin(payload.is_admin);
@@ -33,7 +37,7 @@ export default function Login({ setToken, setIsAdmin }) {
   const submitManager = async () => {
     try {
       const res = await axios.post(
-        'http://localhost:3001/manager/login',
+        `${import.meta.env.VITE_API_URL}/manager/login`,
         { email: managerEmail, idNumber }
       );
       setToken(res.data.token);
