@@ -68,15 +68,8 @@ export default function Login({ setToken, setIsAdmin }) {
       {view === 'admin' && (
         <div className="w-full max-w-sm bg-[#808000] rounded-lg shadow-md p-6">
           <div className="flex justify-center mb-6">
-            <img
-              src="/images/logo1.png"
-              alt="Logo"
-              className="h-36 w-36"
-            />
+           <img src="/Testing-Recon/images/logo1.png" alt="Logo" className="h-42 w-42 "/> </div>
            
-          </div>
-           <h1 className='text=2xl font-bold text-center text-white'>Welcome to Oliver Compass</h1>
-           <br />
           <h1 className="text-2xl font-bold text-center mb-6 text-[#ffffff]">
             ADMIN LOGIN
           </h1>
@@ -116,12 +109,7 @@ export default function Login({ setToken, setIsAdmin }) {
       {view === 'manager' && (
         <div className="w-full max-w-sm bg-white rounded-lg shadow-md p-6">
           <div className="flex justify-center mb-6">
-            <img
-              src="/images/logo1.png"
-              alt="Logo"
-              className="h-36 w-auto"
-            />
-          </div>
+           <img src="/Testing-Recon/images/logo1.png" alt="Logo" className="h-42 w-42 "/> </div>
           <h1 className="text-2xl font-bold text-center mb-6 text-[#6B8E23]">
             ACCOUNT MANAGER LOGIN
           </h1>

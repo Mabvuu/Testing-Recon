@@ -5,7 +5,7 @@ const WelcomePage = () => {
   return (
     <div
       className="pt-30 flex justify-end items-center min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/b.jpg')" }}
+      style={{ backgroundImage: "url('/Testing-Recon/images/b.jpg')" }}
     >
       {/* Outer white box */}
       <div className="w-full max-w-sm bg-white rounded-md shadow-xl mr-8 p-8">
@@ -22,11 +22,7 @@ const WelcomePage = () => {
             giving you sparkling accuracy, total transparency, and peace of mind. 😊
           </p>
           <div className="flex justify-center">
-            <img
-              src="/images/logo1.png"
-              alt="Oliver Compass Logo"
-              className="h-48 w-auto"
-            />
+           <img src="/Testing-Recon/images/logo1.png" alt="Logo" className="h-52 w-auto "/> 
           </div>
         </div>
       </div>
