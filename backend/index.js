@@ -6,6 +6,7 @@ const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
 const managerRoutes = require('./routes/managerRoutes');
 const reportsRouter = require('./routes/Reports');
+const serverless = require('serverless-http');   // ← new
 
 const app = express();
 app.use(cors());
@@ -31,7 +32,5 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`API running on http://localhost:${PORT}`);
-});
+// EXPORT for Vercel, remove app.listen()
+module.exports = serverless(app);
